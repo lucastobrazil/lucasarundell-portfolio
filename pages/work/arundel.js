@@ -1,7 +1,10 @@
 import React from 'react';
 import WorkItemDetail from '../../components/WorkItemDetail';
 import CONTENT from '../content/content';
+import Layout from '../../components/Layout';
 
-const ArundelPage = () => <WorkItemDetail {...CONTENT.ADL} />;
-
-export default ArundelPage;
+export default () => (
+    <Layout title="My Work - Arundel">
+        <WorkItemDetail {...CONTENT.ADL} />
+    </Layout>
+);

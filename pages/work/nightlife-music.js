@@ -1,7 +1,10 @@
 import React from 'react';
 import WorkItemDetail from '../../components/WorkItemDetail';
 import CONTENT from '../content/content';
+import Layout from '../../components/Layout';
 
-const NMPage = () => <WorkItemDetail {...CONTENT.NM} />;
-
-export default NMPage;
+export default () => (
+    <Layout title="My Work - Nightlife Music">
+        <WorkItemDetail {...CONTENT.NM} />
+    </Layout>
+);

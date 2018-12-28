@@ -6,6 +6,7 @@ import { workItems } from '../../pages/content';
 import { workItemMiniData } from '../../pages/content/content';
 
 import { SECTIONS } from '../constants';
+import Layout from '../../components/Layout';
 
 const WorkItemsGrid = () => workItems.map((item, i) => <Fragment key={i}>{item}</Fragment>);
 
@@ -16,12 +17,16 @@ export const WorkItemsSection = () => (
 );
 export default function Work() {
     return (
-        <Section altBg={false}>
-            <h1>{SECTIONS.WORK}</h1>
-            <WorkItemsSection />
+        <Layout title="My Work">
+            <Section altBg={false}>
+                <h1>{SECTIONS.WORK}</h1>
+                <WorkItemsSection />
 
-            <h3>Open source development projects</h3>
-            {workItemMiniData.map((itemProps, i) => <WorkItemMini {...itemProps} key={i} />)}
-        </Section>
+                <h3>Open source development projects</h3>
+                {workItemMiniData.map((itemProps, i) => (
+                    <WorkItemMini {...itemProps} key={i} />
+                ))}
+            </Section>
+        </Layout>
     );
 }

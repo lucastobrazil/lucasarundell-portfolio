@@ -1,7 +1,10 @@
 import React from 'react';
 import WorkItemDetail from '../../components/WorkItemDetail';
 import CONTENT from '../content/content';
+import Layout from '../../components/Layout';
 
-const HHRPage = () => <WorkItemDetail {...CONTENT.HHR} />;
-
-export default HHRPage;
+export default () => (
+    <Layout title="My Work - HeavenHR">
+        <WorkItemDetail {...CONTENT.HHR} />
+    </Layout>
+);
