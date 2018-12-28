@@ -6,4 +6,11 @@ module.exports = withLess({
         modules: true,
         localIdentName: '[folder]-[local]-[hash:base64:5]',
     },
+    exportPathMap: function() {
+        return {
+            '/': { page: '/' },
+            '/work': { page: '/work' },
+            '/about': { page: '/about' },
+        };
+    },
 });
