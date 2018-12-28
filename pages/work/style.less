@@ -1,0 +1,31 @@
+@import '../../styles/vars.less';
+@import '../../styles/responsive-mixins.less';
+
+@itemSpacing: (@basePadding / 2);
+
+.workItemGrid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: @basePadding * 2;
+
+    .widthMin(XS, {
+        margin-left: -@itemSpacing;
+        margin-right: -@itemSpacing;
+    });
+
+    article {
+        flex-basis: 100%;
+        padding-bottom: @itemSpacing;
+
+        .widthMax(S, {
+            padding-bottom: (@itemSpacing * 2);
+        });
+
+        .widthMin(S, {
+            flex-shrink: 1;
+            flex-basis: 290px;
+            padding: @itemSpacing;
+        });
+
+    }
+}

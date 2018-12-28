@@ -1,0 +1,111 @@
+@import '../../styles/vars.less';
+@import '../../styles/responsive-mixins.less';
+.introSection {
+    position: relative;
+
+    h1.mainTitle {
+        margin-bottom: 0;
+    }
+
+    h2.role {
+        margin: 0;
+        color: @subduedText;
+        text-transform: none;
+        font-weight: @fontWeightNormal;
+    }
+}
+
+.section {
+    iframe {
+        max-width: 100%;
+    }
+
+    h1,
+    h2 {
+        flex-basis: 100%;
+    }
+
+    h1 {
+        font-family: @fontFamilySansSerif;
+    }
+
+    h2 {
+        & + p,
+        & + ul {
+            margin-top: (@basePadding / 3);
+        }
+
+        &.toolsHeader {
+            margin-bottom: (@basePadding);
+        }
+    }
+
+    .detailBody {
+        display: flex;
+        & > p,
+        & > ul {
+            margin-top: (@basePadding / 3);
+        }
+
+        .widthMax(M, {
+            flex-wrap: wrap;
+        });
+    }
+}
+
+.jobArt {
+    max-width: 270px;
+    height: auto;
+}
+
+.jobDetails {
+    display: flex;
+    flex-wrap: nowrap;
+    .widthMax(S, {
+       flex-wrap: wrap;
+    });
+}
+
+.back {
+    background: none;
+    border: none;
+    top: @basePadding;
+    font-size: 15px;
+    cursor: pointer;
+    z-index: 1;
+    text-decoration: none;
+    opacity: 0.2;
+    position: absolute;
+    top: 30px;
+    padding: 0;
+    margin-left: -(@basePadding * 0.5);
+    transition: opacity 250ms ease-in-out;
+
+    img {
+        vertical-align: text-bottom;
+        width: 15px;
+        height: 15px;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+}
+.toolsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+    img {
+        padding: 0.5rem 1rem;
+    }
+}
+
+.artSection {
+    padding: 100px 0;
+    background-size: cover;
+    background-position-y: 50%;
+
+    .widthMax(S, {
+        background-position-x: 80%;
+    });
+}

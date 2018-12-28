@@ -1,0 +1,10 @@
+@import '../../styles/vars.less';
+
+.image {
+    max-width: 100%;
+    height: auto;
+    transition: transform 150ms ease;
+    &:hover {
+        transform: perspective(500px) translate3d(0, 0, 5px);
+    }
+}
