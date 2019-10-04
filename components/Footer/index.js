@@ -3,10 +3,11 @@ import Inner from '../../components/Section/Inner';
 import styles from './style.less';
 
 export default function Footer() {
+    const year = new Date().getFullYear();
     return (
         <footer>
             <Inner className={styles.inner}>
-                &copy; 2018 Lucas Arundell
+                &copy; { year } Lucas Arundell
                 <span>
                     <a href="https://www.linkedin.com/in/lucasarundell" target="_blank" rel="noopener noreferrer">
                         <img src='/static/icons/linkedin-icon.svg' alt="Visit me on LinkedIn" />
